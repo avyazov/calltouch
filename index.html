@@ -2,25 +2,112 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>avyazov.github.io/calltouch/</title>
+    <title>avyazov.dev.calltouch.net</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-    <script
-            src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin="anonymous">
+    <!-- calltouch -->
+    <script>
+        (function(f,d,t,e){f.CalltouchDataObject=t;var n="callbacks";f[t]=function(){f[t][n].push(arguments)};if(!f[t][n]){f[t][n]=[]}f[t]["loaded"]=false;if(typeof e!=="object"){e=[e]}f[t]["counters"]=e;for(var o=0;o<e.length;o+=1){s(e[o])}function s(e,n){var t="script";var o=d.getElementsByTagName(t)[0],a=d.createElement(t),r=function(){o.parentNode.insertBefore(a,o)},c=typeof Array.prototype.find==="function",i=c?"init-min.js":"init.js";a.async=true;a.src="https://"+(n||"mod.calltouch")+".ru/"+i+"?id="+e;a.onerror=function(){var t="ct-md";if(n!==t)s(e,t)};if(f.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",r,false)}else{r()}}})(window,document,"ct","93e3968e");
     </script>
     <!-- calltouch -->
-    <script type="text/javascript">
-        (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.type="text/javascript";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","93e3968e");
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZB1RZ8JVE"></script>
+    <script>
+        (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct",["6f5bb12c","93e3968e"]);
     </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HZB1RZ8JVE');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9KH1P946V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-T9KH1P946V');
+    </script>
+
     <!-- calltouch -->
+<!--    &lt;!&ndash; calltouch &ndash;&gt;-->
+<!--    <script type="text/javascript">-->
+<!--        (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.type="text/javascript";s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","xsud2r5k");-->
+<!--    </script>-->
+    <!-- calltouch -->
+    <!-- datago -->
+    <script type="text/javascript" async="1">
+        ;(function(p, l, o, w, i, n, g) {
+            if (!p[i]) {
+                p.GlobalSnowplowNamespace = p.GlobalSnowplowNamespace || [];
+                p.GlobalSnowplowNamespace.push(i);
+                p[i] = function() {
+                    (p[i].q = p[i].q || []).push(arguments)
+                };
+                p[i].q = p[i].q || [];
+                n = l.createElement(o);
+                g = l.getElementsByTagName(o)[0];
+                n.async = 1;
+                n.src = w;
+                g.parentNode.insertBefore(n, g)
+            }
+        }(window, document, "script", "https://stream.datago.ru/tracker/sp.js", "snowplow"));
+
+        window.snowplow('newTracker', 'sp', 'https://stream.datago.ru/collector', {
+            appId: 'calltouch',
+            maxPostBytes: 100000,
+            maxLocalStorageQueueSize: 1000,
+            resetActivityTrackingOnPageView: true,
+            connectionTimeout: 5000,
+            anonymousTracking: false,
+            encodeBase64: false,
+            contexts: {
+                webPage: true,
+                session: true,
+                performanceTiming: true,
+                gaCookies: true,
+                geolocation: false,
+                clientHints: true,
+                encodeBase64: false,
+            },
+            retryStatusCodes: [],
+            dontRetryStatusCodes: []
+        });
+
+        // Отправка события просмотра событий
+        snowplow('trackPageView');
+    </script>
+    <!-- datago -->
 </head>
 
-
+<h1>Тестовый сайт - 2</h1>
 <p>-----------------------------------------------</p>
-<header>Сайт для тестирования подмены</header>
+<header class="header-main" role="navigation">
+    <div class="header-top">
+
+
+
+        <div class="header-top__wrapper">
+
+            <div class="support-service isOpened">
+                <a class="support-service__link js-open-support-service__dropdown" href="#" role="button">
+                    <div class="support-service__text"> ул. Торговая, 22</div>
+                    <div class="support-service__phone">+7 (499) 111 11 11</div><br>
+                    <a class="tn-atom" href="callto:+7 (499) 111 11 11">Номер должен подмениться в тексте и в ссылке - +7 (499) 111 11 11</a><br>
+                    <a class="tn-atom" href="http://74991111111">Номер должен подмениться ТОЛЬКО в тексте, НО НЕ в ссылке - 74991111111</a>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<!--<header>Сайт для тестирования подмены</header>-->
 <p>-----------------------------------------------</p>
 <div></div>
+<div class="support-service__phone">четыре девять девять, 7 единиц +7 (499) 111 11 11</div>
+<p></p>
 <div class="phone_number_1" id="test_phone_1">Телефон 1: +7 (499) 123-11-11</div>
 <p></p>
 <div class="phone_number_2" id="test_phone_2">Телефон 2: +7-499-123-2222</div>
@@ -30,9 +117,51 @@
 <div class="phone_number_4" id="test_phone_4">Телефон 4: 84991234444</div>
 <p></p>
 <a href="tel:74991235555" class="phone_number_5" id="test_phone_5">Телефон 5: +7 499 123-55-55</a>
+
+
+<div>Для круглосуточных звонков: 8 <b>(495)</b> 123-45-67 Находимся по адресу: пр. Просвещения, д. 198. Перед посещением звоните  8 <b>(495)</b> 198-12-22.</div>
+<p></p>
+<div>Для звонков: 8 <b>(34123)</b> 2-71-52<b> Этот текст должен быть выделен жирным +7 (34123) 2-71-52</b></div>
+<p></p>
+<div>Подмена на восемь восемьсот: 8 <b>(383612)</b> 44-44<b> Этот текст должен быть выделен жирным +7 (383612) 44-44</b></div>
+<p></p>
+<div>Подмена на восемь восемьсот: 8 <b>(38361)</b> 244-44<b> Этот текст должен быть выделен жирным +7 (38361) 2-4444</b></div>
+<p></p>
+<div>Подмена с восемь восемьсот на другой код города: 8 <b>(800)</b> 333-44-44<b> Этот текст должен быть выделен жирным +7 (800) 333-44-44</b></div>
 <p></p>
 
-<form name="main-test" class="Form" method="post" onsubmit="return false">
+<a class="tn-atom" href="tel:+74991231111">Номер должен подмениться в тексте и в ссылке - +7 (495) 123 45 67</a>
+
+<div><b>------------------------------------------</b></div>
+<div><b>Не должно быть подмены:</b></div><br>
+<div>123456</div>
+<span><b></b>123-45-67</span><br>
+<div><i>123 45 67</i></div><span>495</span><br>
+<div><span>8(495) 555-55-55</span> <span>8(800) 123-45-67</span></div>
+<p></p>
+<div>
+    ...или напишите
+    <a href="https://api.whatsapp.com/send?phone=+74991231111">нам в WhatsApp!</a>
+    (Ссылка WhatsApp не должна подменяться).
+</div>
+<p></p>
+<div><b>------------------------------------------</b></div><br>
+
+<br/>
+<div class="NoForm__text">Номер счета 40702810800103334444 - в идеале не должен подменяться</div>
+<br/>
+<div class="NoForm__text">Просто какой-то номер - 3334444</div>
+
+<div><b>--------------Автоцели--------------------</b></div><br>
+<a href="mailto:test-autogoal@calltouch.net">Почта: test-autogoal@calltouch.net</a><br>
+
+<a href="https://wa.me/79991234567">WhatsApp</a><br>
+<a href="tg://resolve?domain=norDeman">Telegram</a><br>
+<a class="tn-atom" href="tel:+7 (499) 111 11 11">Номер должен подмениться в тексте и в ссылке - +7 (499) 111 11 11</a><br>
+<a class="tn-atom" href="http://74991111111">Номер должен подмениться ТОЛЬКО в тексте, НО НЕ в ссылке - 74991111111</a>
+
+
+<form name="main-test" class="Form" method="post" onsubmit={console.log("submit")}>
     <p>
         <b class="FormWrapper__question">
             Помогите нам узнать Вас получше
@@ -42,7 +171,7 @@
     <div class="Form__text">Имя</div>
     <input type="text" name="name" value="" placeholder="Введите ваше имя"/><br/>
     <div class="Form__text">Номер телефона</div>
-    <input type="number" name="phone" value="" placeholder="+7 (___) ___-__-__" />
+    <input type="number" name="phone" value="" placeholder="+7 (___) ___-__-__" maxlength=11/>
     <div class="Form__text">E-mail</div>
     <input type="email" name="e-mail" value="" />
     <div class="some">Теперь мы все про Вас знаем</div>
@@ -65,10 +194,13 @@
     </div>
 </div>
 
-<br/>
-<div class="NoForm__text">Номер счета 40702810800100030134</div>
-<br/>
-<div class="NoForm__text">Номер счета 40702810800100030134</div>
 
+<div>
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2161 1477" style="enable-background:new 0 0 2161 1477;" xml:space="preserve">
+<a class="open-ground-1" xmlns="http://www.w3.org/2000/svg">
+<polygon data-number="g-1" class="ground g-free" points="895.1,425.6 882,285.4 1008.8,214.7 1123.1,204.5 1140.9,403.6"></polygon>
+</a>
+</svg>
+</div>
 
 </div>
