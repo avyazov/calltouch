@@ -5,8 +5,10 @@
     <title>avyazov.dev.calltouch.net</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
     <!-- calltouch -->
-    <script>
-        (function(f,d,t,e){f.CalltouchDataObject=t;var n="callbacks";f[t]=function(){f[t][n].push(arguments)};if(!f[t][n]){f[t][n]=[]}f[t]["loaded"]=false;if(typeof e!=="object"){e=[e]}f[t]["counters"]=e;for(var o=0;o<e.length;o+=1){s(e[o])}function s(e,n){var t="script";var o=d.getElementsByTagName(t)[0],a=d.createElement(t),r=function(){o.parentNode.insertBefore(a,o)},c=typeof Array.prototype.find==="function",i=c?"init-min.js":"init.js";a.async=true;a.src="https://"+(n||"mod.calltouch")+".ru/"+i+"?id="+e;a.onerror=function(){var t="ct-md";if(n!==t)s(e,t)};if(f.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",r,false)}else{r()}}})(window,document,"ct","93e3968e");
+    <script type="text/javascript">
+        (function(w,d,n,c){w.CalltouchDataObject=n;w[n]=function(){w[n]["callbacks"].push(arguments)};
+        if(!w[n]["callbacks"]){w[n]["callbacks"]=[]}w[n]["loaded"]=false;if(typeof c!=="object"){c=[c]}w[n]["counters"]=c;for(var i=0;i<c.length;i+=1){p(c[i])}function p(cId){var a=d.getElementsByTagName("script")[0],s=d.createElement("script"),i=function(){a.parentNode.insertBefore(s,a)},m=typeof Array.prototype.find === 'function',n=m?"init-min.js":"init.js";s.type="text/javascript";
+                s.async=true;s.src="https://mod.calltouch.ru/"+n+"?id="+cId;if(w.opera=="[object Opera]"){d.addEventListener("DOMContentLoaded",i,false)}else{i()}}})(window,document,"ct","93e3968e");
     </script>
     <!-- calltouch -->
     <!-- Google tag (gtag.js) -->
@@ -76,15 +78,76 @@
         // Отправка события просмотра событий
         snowplow('trackPageView');
     </script>
+    <script>
+        // Функция для обновления содержимого страницы при изменении URL
+        function handleNavigation() {
+            const path = window.location.pathname;
+
+            const routeContent =  document.getElementById('routeContent');
+
+            if (routeContent) {
+                // Обновление содержимого в зависимости от текущего пути
+                switch (path) {
+                    case '/':
+                        routeContent.innerHTML = '<h2>Home Page</h2>';
+                        break;
+                    case '/path1':
+                        routeContent.innerHTML = '<h2>Home Page/path1</h2>';
+                        break;
+                    case '/path2':
+                    default:
+                        routeContent.innerHTML = '<h2>Home Page/path2</h2>';
+                }
+            }
+        }
+
+        // Функция для навигации без перезагрузки страницы
+        function navigateTo(path) {
+            // Изменение URL без перезагрузки страницы
+            history.pushState(null, null, path);
+
+            // Обновление содержимого страницы
+            handleNavigation();
+        }
+
+        // Обработка изменения URL при использовании кнопок навигации браузера
+        window.onpopstate = handleNavigation;
+
+        // Инициализация содержимого при первой загрузке страницы
+        handleNavigation();
+    </script>
     <!-- datago -->
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(94444897, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/94444897" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </head>
 
-<h1>Тестовый сайт - 2</h1>
+<h1>Тестовый сайт</h1>
 <p>-----------------------------------------------</p>
 <header class="header-main" role="navigation">
     <div class="header-top">
+        <ul>
+            <li><a href="#" onclick="navigateTo('/'); return false;">Home</a></li>
+            <li><a href="#" onclick="navigateTo('/path1'); return false;">path1</a></li>
+            <li><a href="#" onclick="navigateTo('/path2'); return false;">path2</a></li>
+        </ul>
 
-
+        <div id="routeContent">
+            <!-- Содержимое страницы будет обновляться здесь -->
+        </div>
 
         <div class="header-top__wrapper">
 
@@ -113,8 +176,11 @@
 <p></p>
 <div class="phone_number_4" id="test_phone_4">Телефон 4: 84991234444</div>
 <p></p>
-<a href="tel:74991235555" class="phone_number_5" id="test_phone_5">Телефон 5: +7 499 123-55-55</a>
-
+<a href="tel:+78002012015" class="top_phone">+7(800) 201-20-15</a>
+<p></p>
+<a href="tel:74991235555" class="phone_number_6" id="test_phone_6">Телефон 5: +7 499 123-55-55</a>
+<p></p>
+<a href="tel:&#43;7%20%28343%29%20228-38-33">+7 (343) 228-38-33</a>
 
 <div>Для круглосуточных звонков: 8 <b>(495)</b> 123-45-67 Находимся по адресу: пр. Просвещения, д. 198. Перед посещением звоните  8 <b>(495)</b> 198-12-22.</div>
 <p></p>
@@ -127,11 +193,20 @@
 <div>Подмена с восемь восемьсот на другой код города: 8 <b>(800)</b> 333-44-44<b> Этот текст должен быть выделен жирным +7 (800) 333-44-44</b></div>
 <p></p>
 
-<a class="tn-atom" href="tel:+74991231111">Номер должен подмениться в тексте и в ссылке - +7 (495) 123 45 67</a>
+<a class="tn-atom" href="tel:+74991111111">Номер должен подмениться в тексте и в ссылке - +7 (495) 123 45 67</a>
+
+<div><a class="tn-atom" href="tel:+74991111111">Номер должен подмениться в тексте и в ссылке -  123 45 67</a></div>
+
+<div><a class="tn-atom" href="tel:1111111">Номер должен подмениться в тексте и в ссылке -  123 45 67</a></div>
+
+<div><a class="tn-atom" href="tel:1234567">Номер должен подмениться в тексте и в ссылке -  123 45 67</a></div>
+
+<a class="tn-atom" href="tel:88002012015">Номер должен подмениться в тексте и в ссылке - 8 (800) 201-20-15</a>
 
 <div><b>------------------------------------------</b></div>
 <div><b>Не должно быть подмены:</b></div><br>
 <div>123456</div>
+<div>1234567</div>
 <span><b></b>123-45-67</span><br>
 <div><i>123 45 67</i></div><span>495</span><br>
 <div><span>8(495) 555-55-55</span> <span>8(800) 123-45-67</span></div>
@@ -200,4 +275,41 @@
 </svg>
 </div>
 
-</div>
+
+<div><b>подмена полного номера:</b></div><br>
+<div><b>между цифрами кода допускаем нахождение только пробельных символов - '\s*',</b></div><br>
+<div>+7 (4 9 5) 123-45-67 подменится</div><br>
+<div>+7 (4  9 5) 123-45-67 подменится</div><br>
+<div><b>между кодом и номером - допускаем нахождение любых символов кроме цифр - '\D*',</b></div><br>
++7 (495)//123-45-67 подменится</div><br>
++7 (495)1123-45-67 не подменится</div><br>
+<div><b>между цифрами номера - допускаем нахождение любых символов кроме цифр - '\D*'.</b></div><br>
++7 (495)//123-45**67 подменится</div><br>
++7 (495)//123-451167 не подменится</div><br>
+
+<div><b>подмена частичного номера:</b></div><br>
+<div><b>между цифрами кода допускаем любые символы кроме цифр, букв, символа "плюс", запятой и точки</b></div><br>
+1+23-45-67 не подменится</div><br>
+1.23-45-67 не подменится</div><br>
+1,23-45-67 не подменится</div><br>
+1123-45-67 не подменится</div><br>
+1/23-45-67 подменится</div><br>
+
+<div><b>Проверяем, что следом за номером нет других цифр идущих через пробелы или без них</b></div><br>
+123-45-67 подменится</div><br>
+123-45-67123 не подменится</div><br>
+123-45-67 123 не подменится</div><br>
+<div><b>Дополнительно после нахождения частичного номера отдельным запросом проверяем, что сразу перед ним нет цифр и вблизи нет подряд идущих цифр похожих на код города. Игнорируем если номеру предшествует любая цифра (через пробельные символы) </b></div><br>
+81 123-45-67 - не подменится</div><br>
+<div><b>или если перед номером есть 3-7 подряд (или через пробелы) идущих цифр (которые могут быть другим кодом) и между этими цифрами и номером меньше 4-х непробельных символов (и не цифр)</b></div><br>
+<div>111///123-45-67 не подменится</div><br>
+<div>11 111 11////123-45-67 подменится </div><br>
+<div>+7 ((((800)))) 1234567 -подменится </div><br>
+<div>+7 (((800))) 1234567 не подменится</div><br>
+<div>Форматирование в ссылке сохранится:</div><br>
+<div><a href="tel:+7(495)123-45-67">+74951234567</a></div><br>
+<div>Белорусские номера можно использовать:</div><br>
+<div><a href="tel:+375 17 209-90-75">+375 17 209-90-75</a></div><br>
+<div>Частичные номера в ссылке не подменяются (как и раньше):</div><br>
+<div><a href="tel:123-45-67">Позвоните нам</a></div><br>
+
